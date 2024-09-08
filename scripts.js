@@ -47,7 +47,7 @@ function renderBooks(books) {
                 <p><strong>Autor:</strong> ${book.author}</p>
                 <p><strong>Ano:</strong> ${book.year}</p>
                 <p><strong>Descrição:</strong> ${book.description}</p>
-                <button class="download-btn" aria-label="Baixar ${book.title}" onclick="window.open('${book.url}', '_blank')">
+                <button class="download-btn" aria-label="Baixar ${book.title}" onclick="downloadBook('${book.url}')">
                     <img src="./assets/icons/download.svg" alt="Ícone de download" class="download-icon">
                     Baixar
                 </button>
@@ -57,6 +57,12 @@ function renderBooks(books) {
         bookList.appendChild(bookItem);
     });
 }
+
+// Função para abrir o PDF em uma nova aba
+function downloadBook(url) {
+    window.open(url, '_blank');
+}
+
 
 // Função para exibir a mensagem "Livro não encontrado"
 function renderNoResults() {
