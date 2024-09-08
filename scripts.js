@@ -67,8 +67,20 @@ function renderBooks(books) {
 
 // Função para abrir o link do livro
 function openBook(url) {
-    window.open(url, '_blank'); // Abre o link em uma nova aba
+    if (isMobileDevice()) {
+        // Se for um dispositivo móvel, abrir na mesma aba
+        window.location.href = url;
+    } else {
+        // Caso contrário, abrir em uma nova aba
+        window.open(url, '_blank');
+    }
 }
+
+// Função para detectar se é um dispositivo móvel
+function isMobileDevice() {
+    return /Mobi|Android/i.test(navigator.userAgent);
+}
+
 
 // Função para exibir a mensagem "Livro não encontrado"
 function renderNoResults() {
