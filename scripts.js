@@ -53,6 +53,10 @@ function renderBooks(books) {
                         Baixar
                     </button>
                 </a>
+                <button class="download-btn" aria-label="Abrir ${book.title}" onclick="openBook('${book.url}')">
+                    <img src="./assets/icons/download.svg" alt="Ícone de download" class="download-icon">
+                    Abrir
+                </button>
             </div>
         `;
 
@@ -61,11 +65,10 @@ function renderBooks(books) {
 }
 
 
-// Função para abrir o PDF em uma nova aba
-function downloadBook(url) {
-    window.open(url, '_blank');
+// Função para abrir o link do livro
+function openBook(url) {
+    window.open(url, '_blank'); // Abre o link em uma nova aba
 }
-
 
 // Função para exibir a mensagem "Livro não encontrado"
 function renderNoResults() {
@@ -79,7 +82,7 @@ function filterBooks(query) {
         book.title.toLowerCase().includes(query.toLowerCase()) ||
         book.author.toLowerCase().includes(query.toLowerCase())
     );
-    
+
     if (filteredBooks.length === 0) {
         renderNoResults(); // Exibe a mensagem se não encontrar nenhum livro
     } else {
