@@ -307,7 +307,7 @@ a {
     font-size: 1rem;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     margin: 0 auto; /* Centraliza o botão */
     text-decoration: none; /* Remove o sublinhado */
 }

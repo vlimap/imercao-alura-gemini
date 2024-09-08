@@ -47,9 +47,11 @@ function renderBooks(books) {
                 <p><strong>Autor:</strong> ${book.author}</p>
                 <p><strong>Ano:</strong> ${book.year}</p>
                 <p><strong>Descrição:</strong> ${book.description}</p>
-                <button class="download-btn" aria-label="Abrir ${book.title}">
+                <button class="download-btn">
+                <a aria-label="Abrir ${book.title}" href="${book.url}" target="_blank">
                     <img src="./assets/icons/download.svg" alt="Ícone de download" class="download-icon">
-                    <a href="${book.url}" target="_blank">Abrir</a>
+                    Abrir
+                </a>
                 </button>
             </div>
         `;
