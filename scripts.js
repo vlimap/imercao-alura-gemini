@@ -40,13 +40,14 @@ function renderBooks(books) {
 
         bookItem.innerHTML = `
             <div class="book-image">
-                <img src="${book.image}" alt="Capa do livro ${book.title}">
+                <img src="${book.image}" alt="Capa do livro ${book.title}" data-url="${book.url}">
             </div>
             <div class="book-details">
                 <h3>Título: ${book.title}</h3>
                 <p><strong>Autor:</strong> ${book.author}</p>
                 <p><strong>Ano:</strong> ${book.year}</p>
                 <p><strong>Descrição:</strong> ${book.description}</p>
+                <p><strong>URL:</strong> <a href="${book.url}" target="_blank">${book.url}</a></p> <!-- Exibir a URL como link -->
                 <button class="download-btn" aria-label="Baixar ${book.title}" onclick="downloadBook('${book.url}')">
                     <img src="./assets/icons/download.svg" alt="Ícone de download" class="download-icon">
                     Baixar
@@ -64,6 +65,7 @@ function downloadBook(url) {
     const link = document.createElement('a');
     link.href = url;
     link.setAttribute('download', ''); // Forçar o download
+    link.setAttribute('target', '_blank'); // Abre em uma nova aba
 
     // Simula um clique no link
     document.body.appendChild(link);
