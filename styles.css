@@ -1,0 +1,414 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+h1, h2, h3 {
+    font-family: 'Lora', serif;
+}
+
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode .book-details h3,
+body.dark-mode .book-details p {
+    color: #f4f4f4;
+}
+
+/* Container Responsivo */
+.container {
+    width: 100%;
+    max-width: 960px; /* Ajuste para 8 colunas (90%) */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilização do Cabeçalho */
+header {
+    width: 100%;
+    margin-top: 30px;
+}
+
+.header-container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.logo-link {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+    transform: scale(1.1);
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    flex-grow: 1;
+    margin-left: 15px;
+}
+
+/* Botão de Dark Mode */
+.dark-mode-control {
+    background-color: #3187F1;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 37.1px;
+    height:37px;
+}
+
+.dark-mode-control:hover {
+    background-color: #0056B3;
+}
+
+.dark-mode-icon {
+    width: 20px; /* Ajuste para mesmo tamanho */
+    height: 20px;
+    fill: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+
+/* Estilo para o Modo Escuro */
+body.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+body.dark-mode .book-item {
+    background-color: #444;
+    border-color: #666;
+}
+
+body.dark-mode .accessibility-controls button,
+body.dark-mode .search-btn,
+body.dark-mode .download-btn {
+    background-color: #3187F1;
+}
+
+body.dark-mode .accessibility-controls button:hover,
+body.dark-mode .search-btn:hover,
+body.dark-mode .download-btn:hover {
+    background-color: #0056B3;
+}
+
+.accessibility-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.font-size-control,
+.dark-mode-control {
+    background-color: #3187F1;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.font-size-control:hover,
+.dark-mode-control:hover {
+    background-color: #0056B3;
+}
+
+/* Texto de Convite */
+.invitation-text {
+    margin: 40px 0;
+    text-align: center;
+    width: 100%;
+    max-width: 960px; /* Ajuste para 8 colunas */
+}
+
+.invitation-text p {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center;
+}
+
+body.dark-mode .invitation-text p {
+    color: #f4f4f4;
+}
+
+/* Campo de Busca */
+.search-section {
+    width: 100%;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 960px; /* Ajuste para 8 colunas */
+}
+
+.search-bar {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px 0 0 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    outline: none;
+    color: #333;
+}
+
+body.dark-mode .search-bar {
+    background-color: #444;
+    color: white;
+}
+
+.search-bar::placeholder {
+    color: #ccc;
+}
+
+body.dark-mode .search-bar::placeholder {
+    color: #f4f4f4;
+}
+
+.search-bar:focus {
+    border-color: #0056B3;
+}
+
+.search-btn {
+    background-color: #3187F1;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 0 8px 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-btn:hover {
+    background-color: #0056B3;
+}
+
+.search-icon {
+    width: 20px; /* Ajuste uniforme */
+    height: 20px;
+    fill: white;
+}
+
+/* Lista de Livros */
+.book-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+    width: 100%;
+    max-width: 960px; /* Alinha os cards corretamente */
+}
+
+.book-item {
+    display: flex;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    align-items: flex-start;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode .book-item {
+    background-color: #444;
+    border-color: #666;
+}
+
+.book-image img {
+    width: 120px;
+    height: auto;
+    object-fit: cover;
+    margin-right: 20px;
+    display: block;
+    margin-bottom: auto;
+}
+
+.book-details h3 {
+    font-size: 1.5rem;
+    color: #2C3E50;
+    margin-bottom: 10px;
+}
+
+body.dark-mode .book-details h3 {
+    color: #f4f4f4;
+}
+
+.book-details p {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+body.dark-mode .book-details p {
+    color: #f4f4f4;
+}
+
+.download-btn {
+    background-color: #3187F1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto; /* Centraliza o botão */
+}
+
+.download-btn:hover {
+    background-color: #0056B3;
+}
+
+.download-icon {
+    width: 20px; /* Tamanho uniforme ajustado */
+    height: 20px;
+    fill: white;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #333;
+    width: 100%;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+body.dark-mode footer {
+    color: white;
+}
+/* Adiciona um contêiner para sugestões que aparece abaixo do input */
+.suggestions-container {
+    position: absolute;
+    width: 100%;
+    max-width: 960px; /* Ajuste conforme a largura desejada */
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    z-index: 10;
+    max-height: 200px; /* Limite de altura para a lista */
+    overflow-y: auto;  /* Adiciona rolagem quando necessário */
+    margin-top: 5px; /* Garante que apareça logo abaixo do input */
+}
+
+.suggestions-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+/* Garantindo que o input de busca tenha uma posição relativa */
+.search-bar-container {
+    position: relative;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .accessibility-controls {
+        flex-direction: row;
+        margin-bottom: 20px;
+        order: -1; /* Move os ícones para o topo no mobile */
+    }
+    
+    .book-item {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .book-image img {
+        margin-bottom: 10px;
+    }
+
+    .book-details {
+        text-align: center;
+    }
+
+    .download-btn {
+        align-self: center;
+    }
+
+    .search-bar-container {
+        max-width: 100%; /* Alinha com o card */
+        justify-content: center;
+    }
+}

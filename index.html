@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Conhecimento Gratuito</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="/" class="logo-link">
+                <img src="./assets/icons/book-half.svg" alt="Logo do Portal" class="logo">
+            </a>
+            <h1 id="main-heading">Portal de Conhecimento Gratuito</h1>
+            <div class="accessibility-controls">
+                <button class="font-size-control" aria-label="Aumentar tamanho da fonte">A+</button>
+                <button class="font-size-control" aria-label="Tamanho original">A</button>
+                <button class="font-size-control" aria-label="Diminuir tamanho da fonte">A-</button>
+                
+                <!-- Botão de Dark Mode -->
+                <button class="dark-mode-control" aria-label="Alternar Dark Mode">
+                    <img src="./assets/icons/moon.svg" alt="Modo Escuro" class="dark-mode-icon">
+                </button>
+                <!-- Adicionando VLibras -->
+                <div vw class="enabled">
+                    <div vw-access-button class="active"></div>
+                    <div vw-plugin-wrapper>
+                        <div class="vw-plugin-top-wrapper"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Texto de Convite -->
+    <section class="invitation-text container">
+        <p>Bem-vindo ao Buscador de Livros em Domínio Público! Explore gratuitamente clássicos da literatura, títulos de grandes autores e mergulhe em um vasto acervo cultural.</p>
+    </section>
+
+    <section class="search-section container">
+        <div class="search-bar-container">
+            <input list="book-suggestions" placeholder="Buscar por título ou autor..." class="search-bar" id="search-input">
+            <datalist id="book-suggestions">
+                <!-- Sugestões serão inseridas dinamicamente aqui -->
+            </datalist>
+            <button class="search-btn" aria-label="Buscar">
+                <img src="./assets/icons/search.svg" alt="Ícone de busca" class="search-icon">
+            </button>
+        </div>
+    </section>
+    
+    
+
+    <!-- Lista de Livros -->
+    <main class="container" role="main" aria-labelledby="main-heading">
+        <section class="book-list" aria-label="Lista de livros disponíveis">
+            <!-- Livros serão carregados dinamicamente aqui -->
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>© 2024 Portal de Conhecimento Gratuito. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script do VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script src="scripts.js"></script>
+</body>
+</html>
