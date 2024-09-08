@@ -47,15 +47,9 @@ function renderBooks(books) {
                 <p><strong>Autor:</strong> ${book.author}</p>
                 <p><strong>Ano:</strong> ${book.year}</p>
                 <p><strong>Descrição:</strong> ${book.description}</p>
-                <a href="${book.url}" target="_blank" aria-label="Baixar ${book.title}">
-                    <button class="download-btn">
-                        <img src="./assets/icons/download.svg" alt="Ícone de download" class="download-icon">
-                        Baixar
-                    </button>
-                </a>
-                <button class="download-btn" aria-label="Abrir ${book.title}" onclick="openBook('${book.url}')">
+                <button class="download-btn" aria-label="Abrir ${book.title}">
                     <img src="./assets/icons/download.svg" alt="Ícone de download" class="download-icon">
-                    Abrir
+                    <a href="${book.url}" target="_blank">Abrir</a>
                 </button>
             </div>
         `;
@@ -65,10 +59,6 @@ function renderBooks(books) {
 }
 
 
-// Função para abrir o link do livro
-function openBook(url) {
-    window.open(url, '_blank'); // Abre o link em uma nova aba
-}
 
 // Função para exibir a mensagem "Livro não encontrado"
 function renderNoResults() {
