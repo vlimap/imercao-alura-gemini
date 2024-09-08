@@ -58,11 +58,21 @@ function renderBooks(books) {
     });
 }
 
-// Função para abrir o PDF em uma nova aba
+// Função para forçar o download do livro em PDF
 function downloadBook(url) {
-    window.open(url, '_blank');
-}
+    // Criar um link temporário
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', ''); // Forçar o download
+    link.setAttribute('target', '_blank'); // Abre em uma nova aba
 
+    // Simula um clique no link
+    document.body.appendChild(link);
+    link.click();
+
+    // Remove o link temporário
+    document.body.removeChild(link);
+}
 
 // Função para exibir a mensagem "Livro não encontrado"
 function renderNoResults() {
