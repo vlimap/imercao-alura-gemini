@@ -64,7 +64,6 @@ function downloadBook(url) {
     const link = document.createElement('a');
     link.href = url;
     link.setAttribute('download', ''); // Forçar o download
-    link.setAttribute('target', '_blank'); // Abre em uma nova aba
 
     // Simula um clique no link
     document.body.appendChild(link);
@@ -86,7 +85,7 @@ function filterBooks(query) {
         book.title.toLowerCase().includes(query.toLowerCase()) ||
         book.author.toLowerCase().includes(query.toLowerCase())
     );
-    
+
     if (filteredBooks.length === 0) {
         renderNoResults(); // Exibe a mensagem se não encontrar nenhum livro
     } else {
