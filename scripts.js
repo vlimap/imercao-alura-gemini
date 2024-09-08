@@ -1,5 +1,6 @@
 // Variável para armazenar todos os livros carregados
 let allBooks = [];
+let currentFontSize = 16; // Tamanho padrão da fonte
 
 // Função principal para carregar os livros
 function loadBooks() {
@@ -78,9 +79,21 @@ function filterBooks(query) {
     }
 }
 
-// Função para alternar o modo escuro
+// Função para alternar o modo escuro e mudar o ícone
 function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
+    const body = document.body;
+    const icon = document.querySelector('.dark-mode-icon');
+
+    body.classList.toggle('dark-mode');
+
+    // Verifica se o modo escuro está ativo e troca o ícone
+    if (body.classList.contains('dark-mode')) {
+        icon.src = './assets/icons/sun.svg'; // Caminho para o ícone de sol
+        icon.alt = 'Ativar modo claro'; // Alt adequado para acessibilidade
+    } else {
+        icon.src = './assets/icons/moon.svg'; // Caminho para o ícone de lua
+        icon.alt = 'Ativar modo escuro'; // Alt adequado para acessibilidade
+    }
 }
 
 // Função para aumentar o tamanho da fonte
