@@ -293,7 +293,10 @@ body.dark-mode .book-details h3 {
 body.dark-mode .book-details p {
     color: #f4f4f4;
 }
-
+a {
+    text-decoration: none;
+    color: inherit; /* Mantém a cor do texto herdada, se necessário */
+}
 .download-btn {
     background-color: #3187F1;
     color: white;
@@ -306,6 +309,7 @@ body.dark-mode .book-details p {
     align-items: center;
     gap: 10px;
     margin: 0 auto; /* Centraliza o botão */
+    text-decoration: none; /* Remove o sublinhado */
 }
 
 .download-btn:hover {
