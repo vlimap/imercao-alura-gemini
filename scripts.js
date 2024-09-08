@@ -58,21 +58,24 @@ function renderBooks(books) {
     });
 }
 
-// Função para forçar o download do livro em PDF usando Blob
+// Função para tentar abrir o PDF em uma nova aba
 function downloadBook(url, title) {
-    fetch(url)
-        .then(response => response.blob())
-        .then(blob => {
-            const link = document.createElement('a');
-            const objectUrl = URL.createObjectURL(blob);
-            link.href = objectUrl;
-            link.download = `${title}.pdf`; // Nome do arquivo com o título do livro
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            URL.revokeObjectURL(objectUrl); // Libera a memória após o download
-        })
-        .catch(error => console.error('Erro ao baixar o arquivo:', error));
+    // Tentativa 1: Forçar o download
+    try {
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `${title}.pdf`; // Nome do arquivo com o título do livro
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    } catch (e) {
+        console.error('Erro ao tentar forçar o download:', e);
+    }
+
+    // Tentativa 2: Abrir em uma nova aba se o download não funcionar
+    setTimeout(() => {
+        window.open(url, '_blank');
+    }, 1000); // Atraso de 1 segundo para garantir que a tentativa de download seja feita primeiro
 }
 
 // Função para exibir a mensagem "Livro não encontrado"
