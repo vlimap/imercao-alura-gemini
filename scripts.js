@@ -40,17 +40,16 @@ function renderBooks(books) {
 
         bookItem.innerHTML = `
             <div class="book-image">
-                <img src="${book.image}" alt="Capa do livro ${book.title}" data-url="${book.url}">
+                <img src="${book.image}" alt="Capa do livro ${book.title}">
             </div>
             <div class="book-details">
                 <h3>Título: ${book.title}</h3>
                 <p><strong>Autor:</strong> ${book.author}</p>
                 <p><strong>Ano:</strong> ${book.year}</p>
                 <p><strong>Descrição:</strong> ${book.description}</p>
-                <p><strong>URL:</strong> <a href="${book.url}" target="_blank">${book.url}</a></p> <!-- Exibir a URL como link -->
-                <button class="download-btn" aria-label="Baixar ${book.title}" onclick="downloadBook('${book.url}')">
+                <button class="download-btn" aria-label="Abrir ${book.title}" onclick="openBook('${book.url}')">
                     <img src="./assets/icons/download.svg" alt="Ícone de download" class="download-icon">
-                    Baixar
+                    Abrir
                 </button>
             </div>
         `;
@@ -59,20 +58,9 @@ function renderBooks(books) {
     });
 }
 
-// Função para forçar o download do livro em PDF
-function downloadBook(url) {
-    // Criar um link temporário
-    const link = document.createElement('a');
-    link.href = url;
-    link.setAttribute('download', ''); // Forçar o download
-    link.setAttribute('target', '_blank'); // Abre em uma nova aba
-
-    // Simula um clique no link
-    document.body.appendChild(link);
-    link.click();
-
-    // Remove o link temporário
-    document.body.removeChild(link);
+// Função para abrir o link do livro
+function openBook(url) {
+    window.open(url, '_blank'); // Abre o link em uma nova aba
 }
 
 // Função para exibir a mensagem "Livro não encontrado"
