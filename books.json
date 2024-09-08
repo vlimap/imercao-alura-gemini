@@ -1,82 +1,82 @@
 [
-    {
-      "title": "A Carteira",
-      "author": "Machado de Assis",
-      "year": 1884,
-      "description": "A história aborda a luta interna de um homem dividido entre seus valores e ambições sociais, com toques de ironia característicos do autor.",
-      "image": "./assets/img/1.png",
-      "url": "http://www.dominiopublico.gov.br/download/texto/ua000180.pdf"
-    },
-    {
-      "title": "A Cartomante",
-      "author": "Machado de Assis",
-      "year": 1885,
-      "description": "Machado de Assis explora a superstição e o destino de um triângulo amoroso, questionando as consequências de confiar cegamente nas previsões do futuro.",
-      "image": "./assets/img/2.png",
-      "url": "http://www.dominiopublico.gov.br/download/texto/ua000181.pdf"
-    },
-    {
-      "title": "A Causa Secreta",
-      "author": "Machado de Assis",
-      "year": 1889,
-      "description": "O conto revela a crueldade oculta de um homem aparentemente bondoso, que se deleita com o sofrimento alheio.",
-      "image": "./assets/img/3.png",
-      "url": "http://www.dominiopublico.gov.br/download/texto/ua000182.pdf"
-    },
-    {
-      "title": "A Desejada das Gentes",
-      "author": "Machado de Assis",
-      "year": 1896,
-      "description": "Machado de Assis explora a natureza da ambição e os desejos humanos por reconhecimento, em uma narrativa envolvente e reflexiva.",
-      "image": "./assets/img/4.png",
-      "url": "http://www.dominiopublico.gov.br/download/texto/ua000183.pdf"
-    },
-    {
-      "title": "A Igreja do Diabo",
-      "author": "Machado de Assis",
-      "year": 1884,
-      "description": "Nesta sátira, o Diabo decide criar sua própria igreja, apenas para descobrir que os humanos continuarão agindo de maneira hipócrita, mesmo em seu novo culto.",
-      "image": "./assets/img/5.png",
-      "url": "http://www.dominiopublico.gov.br/download/texto/ua000184.pdf"
-    },
-    {
-      "title": "A Mulher de Preto",
-      "author": "Machado de Assis",
-      "year": 1875,
-      "description": "O conto narra a chegada de uma mulher misteriosa em uma cidade, cujos segredos trágicos mudam a vida dos moradores.",
-      "image": "./assets/img/6.png",
-      "url": "http://www.dominiopublico.gov.br/download/texto/ua000185.pdf"
-    },
-    {
-      "title": "A Mão e a Luva",
-      "author": "Machado de Assis",
-      "year": 1874,
-      "description": "A narrativa explora os dilemas de uma jovem entre dois pretendentes e os valores de uma sociedade em transformação.",
-      "image": "./assets/img/7.png",
-      "url": "http://www.dominiopublico.gov.br/download/texto/ua000186.pdf"
-    },
-    {
-      "title": "A Semana",
-      "author": "Machado de Assis",
-      "year": 1892,
-      "description": "Machado de Assis reflete sobre os acontecimentos políticos e sociais de sua época em crônicas curtas e irônicas.",
-      "image": "./assets/img/8.png",
-      "url": "http://www.dominiopublico.gov.br/download/texto/ua000187.pdf"
-    },
-    {
-      "title": "Adão e Eva",
-      "author": "Machado de Assis",
-      "year": 1886,
-      "description": "Uma abordagem irônica e crítica sobre o mito da criação e os primeiros seres humanos.",
-      "image": "./assets/img/9.png",
-      "url": "http://www.dominiopublico.gov.br/download/texto/ua000188.pdf"
-    },
-    {
-      "title": "Esaú e Jacó",
-      "author": "Machado de Assis",
-      "year": 1904,
-      "description": "Romance que conta a história de dois irmãos gêmeos rivais, com fortes críticas sociais e políticas do Brasil da época.",
-      "image": "./assets/img/10.png",
-      "url": "http://www.dominiopublico.gov.br/download/texto/ua000190.pdf"
-    }
+  {
+    "title": "A Carteira",
+    "author": "Machado de Assis",
+    "year": 1884,
+    "description": "A história aborda a luta interna de um homem dividido entre seus valores e ambições sociais, com toques de ironia característicos do autor.",
+    "image": "./assets/img/1.png",
+    "url": "http://www.dominiopublico.gov.br/download/texto/ua000180.pdf"
+  },
+  {
+    "title": "A Cartomante",
+    "author": "Machado de Assis",
+    "year": 1885,
+    "description": "Machado de Assis explora a superstição e o destino de um triângulo amoroso, questionando as consequências de confiar cegamente nas previsões do futuro.",
+    "image": "./assets/img/2.png",
+    "url": "http://www.dominiopublico.gov.br/download/texto/ua000181.pdf"
+  },
+  {
+    "title": "A Causa Secreta",
+    "author": "Machado de Assis",
+    "year": 1889,
+    "description": "O conto revela a crueldade oculta de um homem aparentemente bondoso, que se deleita com o sofrimento alheio.",
+    "image": "./assets/img/3.png",
+    "url": "http://www.dominiopublico.gov.br/download/texto/ua000182.pdf"
+  },
+  {
+    "title": "A Desejada das Gentes",
+    "author": "Machado de Assis",
+    "year": 1896,
+    "description": "Machado de Assis explora a natureza da ambição e os desejos humanos por reconhecimento, em uma narrativa envolvente e reflexiva.",
+    "image": "./assets/img/4.png",
+    "url": "http://www.dominiopublico.gov.br/download/texto/ua000183.pdf"
+  },
+  {
+    "title": "A Igreja do Diabo",
+    "author": "Machado de Assis",
+    "year": 1884,
+    "description": "Nesta sátira, o Diabo decide criar sua própria igreja, apenas para descobrir que os humanos continuarão agindo de maneira hipócrita, mesmo em seu novo culto.",
+    "image": "./assets/img/5.png",
+    "url": "http://www.dominiopublico.gov.br/download/texto/ua000184.pdf"
+  },
+  {
+    "title": "A Mulher de Preto",
+    "author": "Machado de Assis",
+    "year": 1875,
+    "description": "O conto narra a chegada de uma mulher misteriosa em uma cidade, cujos segredos trágicos mudam a vida dos moradores.",
+    "image": "./assets/img/6.png",
+    "url": "http://www.dominiopublico.gov.br/download/texto/bv000173.pdf"
+  },
+  {
+    "title": "A Mão e a Luva",
+    "author": "Machado de Assis",
+    "year": 1874,
+    "description": "A narrativa explora os dilemas de uma jovem entre dois pretendentes e os valores de uma sociedade em transformação.",
+    "image": "./assets/img/7.png",
+    "url": "http://www.dominiopublico.gov.br/download/texto/ua000185.pdf"
+  },
+  {
+    "title": "A Semana",
+    "author": "Machado de Assis",
+    "year": 1892,
+    "description": "Machado de Assis reflete sobre os acontecimentos políticos e sociais de sua época em crônicas curtas e irônicas.",
+    "image": "./assets/img/8.png",
+    "url": "http://www.dominiopublico.gov.br/download/texto/ua000187.pdf"
+  },
+  {
+    "title": "Adão e Eva",
+    "author": "Machado de Assis",
+    "year": 1886,
+    "description": "Uma abordagem irônica e crítica sobre o mito da criação e os primeiros seres humanos.",
+    "image": "./assets/img/9.png",
+    "url": "http://www.dominiopublico.gov.br/download/texto/ua000188.pdf"
+  },
+  {
+    "title": "Esaú e Jacó",
+    "author": "Machado de Assis",
+    "year": 1904,
+    "description": "Romance que conta a história de dois irmãos gêmeos rivais, com fortes críticas sociais e políticas do Brasil da época.",
+    "image": "./assets/img/10.png",
+    "url": "http://www.dominiopublico.gov.br/download/texto/ua000199.pdf"
+  }
 ]
