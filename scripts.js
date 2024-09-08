@@ -47,7 +47,7 @@ function renderBooks(books) {
                 <p><strong>Autor:</strong> ${book.author}</p>
                 <p><strong>Ano:</strong> ${book.year}</p>
                 <p><strong>Descrição:</strong> ${book.description}</p>
-                <button class="download-btn" aria-label="Baixar ${book.title}" onclick="downloadBook('${book.url}')">
+                <button class="download-btn" aria-label="Baixar ${book.title}" onclick="downloadBook('${book.url}', '${book.title}')">
                     <img src="./assets/icons/download.svg" alt="Ícone de download" class="download-icon">
                     Baixar
                 </button>
@@ -58,20 +58,21 @@ function renderBooks(books) {
     });
 }
 
-// Função para forçar o download do livro em PDF
-function downloadBook(url) {
-    // Criar um link temporário
-    const link = document.createElement('a');
-    link.href = url;
-    link.setAttribute('download', ''); // Forçar o download
-    link.setAttribute('target', '_blank'); // Abre em uma nova aba
-
-    // Simula um clique no link
-    document.body.appendChild(link);
-    link.click();
-
-    // Remove o link temporário
-    document.body.removeChild(link);
+// Função para forçar o download do livro em PDF usando Blob
+function downloadBook(url, title) {
+    fetch(url)
+        .then(response => response.blob())
+        .then(blob => {
+            const link = document.createElement('a');
+            const objectUrl = URL.createObjectURL(blob);
+            link.href = objectUrl;
+            link.download = `${title}.pdf`; // Nome do arquivo com o título do livro
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(objectUrl); // Libera a memória após o download
+        })
+        .catch(error => console.error('Erro ao baixar o arquivo:', error));
 }
 
 // Função para exibir a mensagem "Livro não encontrado"
