@@ -47,15 +47,31 @@ function renderBooks(books) {
                 <p><strong>Autor:</strong> ${book.author}</p>
                 <p><strong>Ano:</strong> ${book.year}</p>
                 <p><strong>Descrição:</strong> ${book.description}</p>
-                <a href="${book.url}" class="download-btn" aria-label="Baixar ${book.title}" target="_blank" download>
+                <button class="download-btn" aria-label="Baixar ${book.title}" onclick="downloadBook('${book.url}')">
                     <img src="./assets/icons/download.svg" alt="Ícone de download" class="download-icon">
                     Baixar
-                </a>
+                </button>
             </div>
         `;
 
         bookList.appendChild(bookItem);
     });
+}
+
+// Função para forçar o download do livro em PDF
+function downloadBook(url) {
+    // Criar um link temporário
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', ''); // Forçar o download
+    link.setAttribute('target', '_blank'); // Abre em uma nova aba
+
+    // Simula um clique no link
+    document.body.appendChild(link);
+    link.click();
+
+    // Remove o link temporário
+    document.body.removeChild(link);
 }
 
 // Função para exibir a mensagem "Livro não encontrado"
